@@ -1,0 +1,32 @@
+#link  {
+background-color: grey;
+color: green;
+font-weight: 900;
+}
+
+big {
+	color: red;
+	font-size: 300%;
+}
+
+
+/* The animation code */
+@keyframes rotation_animation {
+    0%  {transform: rotate(0deg); color:black; }
+    25% {transform: rotate(20deg) scale(1.5,1.5); color:yellow; }
+    50% {transform: rotate(0deg) scale(1,1); color:black; }
+    75% {transform: rotate(-20deg) scale(1.5,1.5); color:red; }
+    100% {transform: rotate(0deg) scale(1,1); color:black; }
+}
+
+
+rotating {
+	color: blue;
+	display:inline-block;
+}
+
+rotating:hover {
+    animation-name: rotation_animation;
+    animation-duration: 5s;	
+    animation-iteration-count: 3;
+}

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+ <id>urn:iweb:A622F718-19C9-48A9-A6ED-C46ADC0BDE52</id>
+ <title>Page list Atom feed</title>
+ <updated>2012-10-31T16:17:48+04:00</updated>
+ <link rel="self" href="feed.xml"/>
+ <generator>iWeb</generator>
+ <author>
+  <name>iWeb</name>
+ </author>
+ <entry>
+  <id>urn:iweb:7152CC38-904F-4C4D-8C06-214907072040</id>
+  <title>Эдик на Intergeo</title>
+  <title xmlns="urn:iweb:">Эдик на Intergeo</title>
+  <in-navbar xmlns="urn:iweb:">7152CC38-904F-4C4D-8C06-214907072040</in-navbar>
+  <link rel="alternate" href="Edik_na_Intergeo.html"/>
+  <updated>2012-10-31T16:17:48.001+04:00</updated>
+  <content>Эдик на Intergeo</content>
+ </entry>
+</feed>

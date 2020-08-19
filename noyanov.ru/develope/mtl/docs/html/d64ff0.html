@@ -1,0 +1,219 @@
+<html>
+
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1251" >
+<title>Matrix</title>
+</head>
+
+<body>
+<a NAME="8df7c0x1e4c3a0">
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="BOTTOM">
+    <td><font SIZE="5">Matrix</font> <hr>
+    </td>
+    <td ALIGN="RIGHT"><hr>
+    </td>
+  </tr>
+</table>
+
+<p ALIGN="left"><font SIZE="3">Base <b>Matrix</b> class. </font></p>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="TOP">
+    <td WIDTH="1%"><i><font SIZE="3"><b>Note:<font SIZE="2">&nbsp;&nbsp;&nbsp;</font></b> </font></i></td>
+    <td><i><font SIZE="3">Indexes in all matrix operation start with 1 (as you expect in
+    mathematics) not with 0 (as you expect in C programming). So first element of a matrix is
+    accessed as (1,1). </font></i></td>
+  </tr>
+</table>
+
+<p ALIGN="left"><font SIZE="3">As the package defines some operators for <b>Matrix</b>
+classes you can carry out complex matrix operation in the simple case as showed on follow
+example. <b>Matrix</b>&lt;float&gt; a(3,3),b(3,3),c(3,3); c(3,3)=a+b; c+=(b//a); cout
+&lt;&lt; c.</a><a HREF="d66544.html#a2ac50x1e4c8e0">Transpose</a>(); </font></p>
+
+<p ALIGN="left"><font SIZE="3">All operation with matrixes can be divided into some
+groups: </font></p>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="TOP">
+    <td WIDTH="1%"><font SIZE="3"><b>o</b><font SIZE="2">&nbsp;&nbsp;&nbsp;</font> </font></td>
+    <td><font SIZE="3"><b>construction</b>. Allows to create a matrix from another. <b>Matrix</b>&lt;float&gt;
+    a(2,3); <b>Matrix</b>&lt;float&gt; b(a); </font></td>
+  </tr>
+</table>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="TOP">
+    <td WIDTH="1%"><font SIZE="3"><b>o</b><font SIZE="2">&nbsp;&nbsp;&nbsp;</font> </font></td>
+    <td><font SIZE="3"><b>size operation</b>. Allows to retrieve and change matrix dimensions.
+    <b>Matrix</b>&lt;float&gt; a(2,3); int columns=a.<a HREF="d6570c.html#a2ac50x1e4c560">GetColumns</a>();
+    a.SetDimensions(5,4); </font></td>
+  </tr>
+</table>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="TOP">
+    <td WIDTH="1%"><font SIZE="3"><b>o</b><font SIZE="2">&nbsp;&nbsp;&nbsp;</font> </font></td>
+    <td><font SIZE="3"><b>access operation</b>. Allows to get and set matrix elements. for(int
+    row=1;row&lt;=a.<a HREF="d65914.html#a2ac50x1e4c5e0">GetRows</a>();row++) for(int
+    column=1;column&lt;=a.<a HREF="d6570c.html#a2ac50x1e4c560">GetColumns</a>();column++)
+    a(row,column)=1; b(1,1)=a(1,2); </font></td>
+  </tr>
+</table>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <tr VALIGN="TOP">
+    <td WIDTH="1%"><font SIZE="3"><b>o</b><font SIZE="2">&nbsp;&nbsp;&nbsp;</font> </font></td>
+    <td><font SIZE="3"><b>mathematical operation</b>. Allows to sum, substruct, multiply two
+    matrixes and sum a matrix with scalal. Addition matrix operations (transposition) is also
+    provided. <b>Matrix</b>&lt;float&gt; c(2,3); c=a+b; <b>Matrix</b>&lt;float&gt; d(c*a.<a HREF="d66544.html#a2ac50x1e4c8e0">Transpose</a>()); cout &lt;&lt; d; </font></td>
+  </tr>
+</table>
+
+<p ALIGN="left"><font FACE="Arial,Helvitica,sans-serif,system" SIZE="5"><b><img SRC="bullet.gif" WIDTH="17" HEIGHT="17"> Subclasses </b></font></p>
+
+<p ALIGN="left"><font SIZE="3"><a HREF="d604b0.html#8df7c0x1e41208">GrowMatrix</a>, <a HREF="d6fd08.html#8df7c0x1bcd388">RedundandEquationSystem</a>, <a HREF="d70c44.html#8df7c0x1bcd708">SquareMatrix</a>, and <a HREF="d81e58.html#8df7c0x1bcd990">Vector</a> </font></p>
+
+<p ALIGN="left"><font FACE="Arial,Helvitica,sans-serif,system" SIZE="5"><b><img SRC="bullet.gif" WIDTH="17" HEIGHT="17"> Groups </b></font></p>
+
+<table CELLSPACING="0" CELLPADDING="0" WIDTH="100%">
+  <a NAME="d64ff0_members">
+  <tr VALIGN="TOP">
+    <td><b>members</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d66b5c.html#95a420x1bf0760">m_columns</a></td>
+    <td><p ALIGN="left"><font SIZE="3">Number of rows and columns in matrix </font></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d66c60.html#95a420x1bf07a0">m_matrix</a></td>
+    <td><p ALIGN="left"><font SIZE="3">Data storage. Information is stored by rows. </font></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d66d64.html#95a420x1bf07e0">m_rows</a></td>
+    <td><p ALIGN="left"><font SIZE="3">Number of rows and columns in matrix </font></td>
+  </tr>
+  <a NAME="d64ff0_size">
+  <tr VALIGN="TOP">
+    <td><b>size</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d6570c.html#a2ac50x1e4c560">GetColumns</a></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d65914.html#a2ac50x1e4c5e0">GetRows</a></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d66134.html#a2ac50x1e4c7e0">ResetDimensions</a></td>
+    <td>Changes the matrix size and reallocks the matrix memory storage. </td>
+  </tr>
+  <a NAME="d64ff0_access">
+  <tr VALIGN="TOP">
+    <td><b>access</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d65810.html#a2ac50x1e4c5a0">GetData</a></td>
+    <td>Enhanced access routine. Returns pointer to data storage of matrix. </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d66e68.html#a2ac50x1bf0820">operator()</a></td>
+    <td>Set matrix value (element) at given <i>row</i>,<i>column</i> Thank it, one can write
+    A(2,3)=5 to set element at 2'nd <i>row</i> and 3'rd <i>column</i> to 5 </td>
+  </tr>
+  <a NAME="d64ff0_Assignment">
+  <tr VALIGN="TOP">
+    <td><b>Assignment</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d6717c.html#a2ac50x1bf08e0">operator*=</a></td>
+    <td>Multiply-Equals Operator </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d67384.html#a2ac50x1bf0960">operator+=</a></td>
+    <td>Plus-Equals Operator </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d67690.html#a2ac50x1bf0a20">operator-=</a></td>
+    <td>Minus-Equals Operator </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d6799c.html#a2ac50x1bf0ae0">operator=</a></td>
+    <td>Assignment Operator </td>
+  </tr>
+  <a NAME="d64ff0_Operations">
+  <tr VALIGN="TOP">
+    <td><b>Operations</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d650f4.html#a2ac50x1e4c3e0">DelimLine</a></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d652fc.html#a2ac50x1e4c460">DelimValue</a></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d65504.html#a2ac50x1e4c4e0">FormValue</a></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d65a18.html#a2ac50x1e4c620">InitialForm</a></td>
+    <td></td>
+  </tr>
+  <a NAME="d64ff0_constdest">
+  <tr VALIGN="TOP">
+    <td><b>constdest</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d65c20.html#a2ac50x1e4c6a0">Matrix</a></td>
+    <td>Builds an instance of the object </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d67ba4.html#a2ac50x1bf0b60">~Matrix</a></td>
+    <td>Frees alloced memory, if any. </td>
+  </tr>
+  <a NAME="d64ff0_operations">
+  <tr VALIGN="TOP">
+    <td><b>operations</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d66544.html#a2ac50x1e4c8e0">Transpose</a></td>
+    <td>Function for matrix calculation of the transposed matrix. //Transposed matrix// is
+    matrix which columns correspond to rows given matrix. Transposition of a matrix A(m,n)
+    creates matrix AT(m,n) there AT(i,j)=A(j,i). </td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td><a HREF="d66648.html#a2ac50x1e4c920">TransposeItself</a></td>
+    <td></td>
+  </tr>
+  <a NAME="d64ff0_private">
+  <tr VALIGN="TOP">
+    <td><b>private</b></td>
+    <td></td>
+  </tr>
+  <tr VALIGN="TOP">
+    <td></a><a HREF="d6674c.html#a2ac50x1e4c960">_copy</a></td>
+    <td>Reallocs memory for matrix values. </td>
+  </tr>
+</table>
+
+<p ALIGN="left"><font FACE="Arial,Helvitica,sans-serif,system" SIZE="5"><b><img SRC="bullet.gif" WIDTH="17" HEIGHT="17"> See Also </b></font></p>
+
+<p ALIGN="left"><font SIZE="3"><a HREF="hierarchy.html#99f810x0">Class Hierarchy</a> </font></p>
+
+<p ALIGN="center"><a HREF="http://www.tall-tree.com/DocJet/"><img SRC="djbanner.gif" WIDTH="446" HEIGHT="54"> </a></p>
+</body>
+</html>
+
+<!-- Localized -->

@@ -1,0 +1,33 @@
+
+  .sidenav 
+  {
+
+    width: 240px;
+    position: fixed;
+    z-index: 1;
+    top: 12%;
+    left: 10px;
+    background: grey;
+    overflow-x: hidden;
+    padding: 8px 0;
+    border-radius: 20px; 
+  }
+
+.sidenav a 
+{
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #aad4a3;
+  display: block;
+  
+}
+
+.bodyStyle
+{
+  margin-left: 250px; /* Same width as the sidebar + left position in px */
+  font-size: 28px;    /* Increased text to enable scrolling */
+  padding: 0px 10px;
+  background-opacity: 0.5;
+}
